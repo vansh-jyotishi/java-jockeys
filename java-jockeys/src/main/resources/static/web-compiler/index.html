@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java IDE | Java Jockeys</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="ide-header">
+    <div class="header-content">
+        <div class="brand">
+            <div class="logo">
+                <span class="bracket">{</span>
+                <span class="jj">JJ</span>
+                <span class="bracket">}</span>
+            </div>
+            <div class="brand-text">
+                <h1>Java Jockeys IDE</h1>
+                <span class="subtitle">Online Compiler</span>
+            </div>
+        </div>
+        <div class="ide-controls">
+            <div class="connection-status">
+                <span class="status-dot connected"></span>
+                <span class="status-text">Server Online</span>
+            </div>
+            <button class="icon-btn" onclick="resetCode()" title="Reset Code">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 12"/>
+                    <path d="M3 3v9h9"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="ide-container">
+    <div class="toolbar">
+        <div class="file-tabs">
+            <div class="tab active">
+                <span class="tab-icon">☕</span>
+                <span class="tab-name">Main.java</span>
+            </div>
+        </div>
+        <div class="toolbar-actions">
+            <button class="run-btn" onclick="runCode()">
+                <span class="run-icon">▶</span>
+                <span class="run-text">Run</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="editor-container">
+        <div class="line-numbers" id="lineNumbers">1</div>
+        <div class="editor-wrapper" id="editorWrapper">
+            <div class="editor-layer">
+                <pre id="codeDisplay" class="code-layer"><code id="codeHighlighted" class="language-java">public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}</code></pre>
+                <textarea id="code" class="input-layer" spellcheck="false">public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}</textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="output-panel">
+        <div class="output-header">
+            <span class="output-label">Output</span>
+            <button class="clear-btn" onclick="clearOutput()">Clear</button>
+        </div>
+        <pre id="result" class="output-text">Ready to compile. Click Run to execute your Java program...</pre>
+    </div>
+</div>
+
+<div class="status-bar">
+    <div class="status-left">
+        <span class="status-item" id="cursorPos">Ln 1, Col 1</span>
+        <span class="status-separator">|</span>
+        <span class="status-item">UTF-8</span>
+        <span class="status-separator">|</span>
+        <span class="status-item">Java</span>
+    </div>
+    <div class="status-right">
+        <span class="status-item" id="compileStatus">Idle</span>
+        <span class="status-separator">|</span>
+        <span class="status-item">JDK 21</span>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

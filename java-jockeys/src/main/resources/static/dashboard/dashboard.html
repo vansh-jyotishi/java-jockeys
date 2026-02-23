@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Java Jockeys</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar-content">
+        <div class="logo-section">
+            <div class="logo-icon">
+                <span class="bracket">{</span>
+                <span class="logo-text">JJ</span>
+                <span class="bracket">}</span>
+            </div>
+            <div class="logo-info">
+                <h1>Java Jockeys</h1>
+                <span class="tagline">
+                    <span class="keyword">public static void</span> 
+                    <span class="function">learn</span>();
+                </span>
+            </div>
+        </div>
+        <div class="status-bar">
+            <span class="status-indicator online"></span>
+            <span class="status-text">System Online</span>
+            <span class="version">v2.0.1</span>
+        </div>
+    </div>
+</header>
+
+<section class="welcome">
+    <div class="code-window">
+        <div class="window-header">
+            <div class="window-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <span class="window-title">Welcome.java</span>
+        </div>
+        <div class="code-content">
+            <div class="line-numbers">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>7</span>
+            </div>
+            <div class="code-text">
+                <p><span class="keyword">public class</span> <span class="class-name">Welcome</span> {</p>
+                <p>&nbsp;&nbsp;<span class="keyword">public static void</span> <span class="function">main</span>(String[] args) {</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class="string">"Hello, Coder! 🚀"</span>);</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Master Java through practice</span></p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Build. Break. Learn. Repeat.</span></p>
+                <p>&nbsp;&nbsp;}</p>
+                <p>}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cards">
+
+    <div class="card active" onclick="location.href='/web-compiler/index.html'">
+        <div class="card-header">
+            <div class="card-icon compiler">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+            </div>
+            <span class="card-badge live">LIVE</span>
+        </div>
+        <h3>Java Compiler</h3>
+        <p>Write, compile, and execute Java code in real-time. Full IDE features with syntax highlighting.</p>
+        <div class="card-meta">
+            <span class="tech-tag">JDK 21</span>
+            <span class="tech-tag">Spring Boot</span>
+        </div>
+        <div class="card-action">
+            <span class="prompt">$</span> <span class="command">run compiler</span>
+            <span class="cursor">▋</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="card-icon courses">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+            </div>
+            <span class="card-badge coming">DEV</span>
+        </div>
+        <h3>Curriculum</h3>
+        <p>Structured learning paths from OOP basics to advanced design patterns and system architecture.</p>
+        <div class="card-meta">
+            <span class="tech-tag">OOP</span>
+            <span class="tech-tag">Design Patterns</span>
+        </div>
+        <div class="card-action disabled">
+            <span class="prompt">#</span> <span class="command">git checkout courses</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="card-icon practice">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+            </div>
+            <span class="card-badge coming">BETA</span>
+        </div>
+        <h3>Practice Lab</h3>
+        <p>Coding challenges, algorithmic problems, and real-world projects with automated testing.</p>
+        <div class="card-meta">
+            <span class="tech-tag">JUnit</span>
+            <span class="tech-tag">CI/CD</span>
+        </div>
+        <div class="card-action disabled">
+            <span class="prompt">#</span> <span class="command">npm test</span>
+        </div>
+    </div>
+
+</section>
+
+<section class="about">
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <span class="terminal-title">~/java-jockeys/about</span>
+        </div>
+        <div class="terminal-body">
+            <div class="terminal-line">
+                <span class="user">coder@java-jockeys</span>:<span class="path">~/about</span>$ <span class="cmd">cat mission.txt</span>
+            </div>
+            <div class="terminal-output">
+                <p>Java Jockeys is a developer-centric organization dedicated to</p>
+                <p>teaching Java and core programming concepts through hands-on</p>
+                <p>learning, real compilers, and industry-standard tools.</p>
+                <br>
+                <p>> We believe in learning by building.</p>
+                <p>> We embrace the debugger's mindset.</p>
+                <p>> We ship code that compiles.</p>
+            </div>
+            <div class="terminal-line">
+                <span class="user">coder@java-jockeys</span>:<span class="path">~/about</span>$ <span class="cursor">▋</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-left">
+            <span class="footer-brand">Java Jockeys</span>
+            <span class="footer-divider">|</span>
+            <span class="footer-copy">© 2026</span>
+        </div>
+        <div class="footer-center">
+            <span class="build-info">Build: stable-2.0.1</span>
+            <span class="commit">commit: a7f3d2e</span>
+        </div>
+        <div class="footer-right">
+            <span class="made-with">Made with</span>
+            <span class="heart">♥</span>
+            <span class="stack">Java + Coffee</span>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
